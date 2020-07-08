@@ -69,7 +69,7 @@ class Plucker {
     for (size_t i = 0; i < size; ++i) {
       float in = 0.0f;
       if (remaining_samples_) {
-        in = 2.0f * Random::GetFloat() - 1.0f;
+        in = 2.0f * stmlib::Random::GetFloat() - 1.0f;
         --remaining_samples_;
       }
       out[i] = in + comb_gain * comb_filter_.Read(comb_delay);
